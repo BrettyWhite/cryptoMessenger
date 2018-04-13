@@ -19,7 +19,30 @@ Keys are held in the [Android Keystore](https://developer.android.com/training/a
 
 ### Installation
 
-Gradle compile line coming soon. Until then if you really want this you can copy the 2 classes into your project. *Or* you can clone the repository and add it as a module in your project.
+Gradle compile line coming soon. 
+
+Maven:
+
+Make sure you have `mavenCentral()` listed as a repository in your project's gradle file:
+
+```ruby
+repositories {
+    mavenCentral()
+}
+```
+And in your app's build.gradle file:
+
+```ruby
+repositories {
+    maven { url 'https://dl.bintray.com/brettywhite/cryptomessenger/' }
+}
+...
+
+dependencies {
+    implementation 'com.brettywhite:cryptomessenger:0.0.1'
+}
+
+```
 
 ### Usage
 
