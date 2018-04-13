@@ -1,4 +1,4 @@
-## CryptoMessenger - RSA Encryption For Your App
+## CryptoMessenger Android - RSA Encryption For Your App
 
 ### Intro
 
