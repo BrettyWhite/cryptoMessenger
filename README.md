@@ -4,7 +4,7 @@
 
 This is meant to be an easy to use asymmetric encryption library. I designed it with instant messengers in mind, but it should be usable for other purposes. 
 
-With that out of the way, the purpose of this is not to be the **best** encryption available. There are plenty of libraries that are studied far more than this, such as the [Signal Library](https://github.com/signalapp/libsignal-service-java), which I urge everyone to look at. With that in mind, this was meant to convince developers who were going to abandon the thought of adding encryption due to complex integrations of lack of subject area knowledge to add it to their app. 
+With that out of the way, the purpose of this is not to be the **best** encryption available. There are plenty of libraries that are studied far more than this, such as the [Signal Library](https://github.com/signalapp/libsignal-service-java), which I urge everyone to look at. With that in mind, this was meant to convince developers who were going to abandon the thought of adding encryption due to complex integrations or lack of subject area knowledge to add it to their app. 
 
 ### Encryption
 
@@ -15,7 +15,7 @@ This uses 2048 Bit RSA KeyPairs with:
 
 Keys are held in the [Android Keystore](https://developer.android.com/training/articles/keystore.html). The private key never leaves the user's device.
 
-**NOTE:** If the app is uninstalled or new keys are made, anything encrypted with the previous keys will **NEVER** be able to be restored, and should be considered lost. Please put thought into your system design.
+**WARNING:** If the app is uninstalled or new keys are made, anything encrypted with the previous keys will **NEVER** be able to be restored, and should be considered lost. Please put thought into your system design.
 
 ### Usage
 
@@ -39,7 +39,7 @@ The cool thing about this library is it gives you good control of how you handle
 
 #### Key Creation
 
-It is good to create your keys when your user registers of logs in for the first time. It is **Extremely** important to check for existing keys first. Additionally, the `createKeys` method contains one parameter that is a boolean. If you pass in true, it sends back a `PublicKey` object. You should then associate this key to the user in your database. You will need it accessible for other users to get this later to send messages to this user. 
+It is good to create your keys when your user registers or logs in for the first time. It is **Extremely** important to check for existing keys first. Additionally, the `createKeys` method contains one parameter that is a boolean. If you pass in true, it sends back a `PublicKey` object. You should then associate this key to the user in your database. You will need it accessible for other users to get this later to send messages back to this user. 
 
 ##### Retrieve key after creation:
 
@@ -61,7 +61,7 @@ KeyManager km = new KeyManager(context);
 
 #### Getting the Public Key
 
-If you did not retrieve this key and store it during key creation, fear not. You can simply call
+If you did not retrieve this key and store it during key creation, fear not. You can simply call:
 
 ```java
 KeyManager km = new KeyManager(context);
