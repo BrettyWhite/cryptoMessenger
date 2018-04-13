@@ -8,6 +8,18 @@ With that out of the way, the purpose of this is not to be the **best** encrypti
 
 ### Encryption
 
+#### Short Overview
+
+This library uses asymmetric cryptography, otherwise known as [public key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography). That means that each user needs a key pair - an associated public and private key. The private key must always be kept secret, and in the case of this library, never leaves the phone. The public key is, well, public. You are safe transferring this key to your user database and serving it up to other users who need to communicate with its' owner. 
+
+Essentially, if I encrypt a message with your public key, it means that only you, the holder of the private key, can decrypt the message. Likewise if you want a message to only be for my eyes, you can encrypt it with my public key and then i can decrypt it with my private key to see what you said. 
+
+This is different from [symmetric encryption](https://en.wikipedia.org/wiki/Symmetric-key_algorithm) that uses a shared known key between users. With that, a message is both encrypted and decrypted with the *same* key. This is useful for some things, but is generally advised against for a chat application.
+
+As the library currently does not support signing messages, I will skip that until I can add that in.
+
+#### Key Information
+
 This uses 2048 Bit RSA KeyPairs with:
 
 1. `ECB` as the block mode
