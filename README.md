@@ -17,6 +17,10 @@ Keys are held in the [Android Keystore](https://developer.android.com/training/a
 
 **WARNING:** If the app is uninstalled or new keys are made, anything encrypted with the previous keys will **NEVER** be able to be restored, and should be considered lost. Please put thought into your system design.
 
+### Installation
+
+Gradle compile line coming soon. Until then if you really want this you can copy the 2 classes into your project. *Or* you can clone the repository and add it as a module in your project.
+
 ### Usage
 
 There are 7 simple public methods in this library:

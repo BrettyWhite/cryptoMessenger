@@ -16,7 +16,8 @@ import java.util.Arrays;
 /**
  * Created by bmagicdahomie on 4/4/18. <br>
  *
- * Conversion Utilities Used Throughout The Library
+ * Conversion Utilities Used Throughout The Library <br>
+ * Many methods based off of ones found at https://github.com/Mauin/RxFingerprint
  */
 public class ConversionUtil {
 
