@@ -31,7 +31,7 @@ Keys are held in the [Android Keystore](https://developer.android.com/training/a
 
 ### Installation
 
-####Gradle (easiest):
+#### Gradle (easiest):
 
 Make sure you have `jcenter()` listed as a repository in your project's gradle file:
 
