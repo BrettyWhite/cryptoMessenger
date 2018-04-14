@@ -145,9 +145,10 @@ String plainText = keyManager.decrypt(cipherText);
 
 ### Missing / Future functionality
 
-1. Signing messages - This will be added soon (to prevent MITM attacks)
-2. Unit tests - because why not
-3. iOS library - YAY
+1. iOS library
+2. Signing messages - to prevent MITM attacks
+3. Unit tests - because why not
+4. The ability for encrypted group messaging 
 
 ### Pull Requests
 
