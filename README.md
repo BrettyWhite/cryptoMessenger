@@ -31,30 +31,26 @@ Keys are held in the [Android Keystore](https://developer.android.com/training/a
 
 ### Installation
 
-Gradle compile line coming soon. 
+####Gradle (easiest):
 
-Maven:
-
-Make sure you have `mavenCentral()` listed as a repository in your project's gradle file:
+Make sure you have `jcenter()` listed as a repository in your project's gradle file:
 
 ```ruby
 repositories {
-    mavenCentral()
+    jcenter()
 }
 ```
 And in your app's build.gradle file:
 
 ```ruby
-repositories {
-    maven { url 'https://dl.bintray.com/brettywhite/cryptomessenger/' }
-}
-...
-
 dependencies {
     implementation 'com.brettywhite:cryptomessenger:0.0.1'
 }
-
 ```
+
+#### Without Gradle:
+
+Clone the project and copy the contents of com.brettywhite.cryptomessenger into your project. 
 
 ### Usage
 
